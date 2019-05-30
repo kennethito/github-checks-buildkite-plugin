@@ -284,6 +284,7 @@ def load_job_output(output_title, output_summary, output):
     """Loads job output (maybe) from files, to be moved to handler layer."""
     def read_if_file(val):
         logger.info("Checking for file %s in %s", val, os.getcwd())
+        logger.info("Dir contents: %s", ','.join(os.listdir()))
         for thing in os.listdir():
             logger.info(thing)
         if os.path.exists(val):
